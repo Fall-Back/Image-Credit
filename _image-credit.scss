@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------------------------------*\
+    Fall-Back Nav Bar Pattern v0.5
+
+    Design for use with the basic [CSS Mustard Cut](https://github.com/Fall-Back/CSS-Mustard-Cut)
+    IE 9+, FF 8+, Opera 12, [Chrome 29+, Android ~4.4+]
+    Chrome 29+, Opera 16+, Safari 6.1+, iOS 7+, Android ~4.4+
+
+\*------------------------------------------------------------------------------------------------*/
+
+// Colours:
+// Note that the UI colour isn't used by this pattern.
+$fallback--image-credit__open--bg-color:          rgba(0,0,0,0.2) !default;
+$fallback--image-credit__open--bg-color--alt:     rgba(0,0,0,0.4) !default;
+
+$fallback--image-credit__close--bg-color:         $fallback--image-credit__open--bg-color;
+$fallback--image-credit__close--bg-color--alt:    rgba(255,255,255,0.1) !default;
+
+$fallback--image-credit__credit-line--text-color: #fff;
+$fallback--image-credit__credit-line--bg-color:   rgba(0,0,0,0.8);
+
+// Sizes:
+$fallback--image-credit__control-size:           1.5rem !default;//$fallback--image-credit--spacing * 2 !default;
+$fallback--image-credit__control-radius:         50% !default;
+
+$fallback--image-credit__credit-line--padding:   0.75rem;
+
+// Position:
+$fallback--image-credit__control-v-position:     top !default;
+$fallback--image-credit__control-h-position:     right !default;
+
+$fallback--image-credit__control-spacing:        0.1875rem !default;
+
+
+// Breakpoints:
+$fallback--image-credit--breakpoint--enhanced:   45em !default;
+
+
+// SVG's
+$fallback--image-credit__open--svg:              "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJjNS41MTQgMCAxMCA0LjQ4NiAxMCAxMHMtNC40ODYgMTAtMTAgMTAtMTAtNC40ODYtMTAtMTAgNC40ODYtMTAgMTAtMTB6bTAtMmMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptLTIuMDMzIDE2LjAxYy41NjQtMS43ODkgMS42MzItMy45MzIgMS44MjEtNC40NzQuMjczLS43ODctLjIxMS0xLjEzNi0xLjc0LjIwOWwtLjM0LS42NGMxLjc0NC0xLjg5NyA1LjMzNS0yLjMyNiA0LjExMy42MTMtLjc2MyAxLjgzNS0xLjMwOSAzLjA3NC0xLjYyMSA0LjAzLS40NTUgMS4zOTMuNjk0LjgyOCAxLjgxOS0uMjExLjE1My4yNS4yMDMuMzMxLjM1Ni42MTktMi40OTggMi4zNzgtNS4yNzEgMi41ODgtNC40MDgtLjE0NnptNC43NDItOC4xNjljLS41MzIuNDUzLTEuMzIuNDQzLTEuNzYxLS4wMjItLjQ0MS0uNDY1LS4zNjctMS4yMDguMTY0LTEuNjYxLjUzMi0uNDUzIDEuMzItLjQ0MiAxLjc2MS4wMjIuNDM5LjQ2Ni4zNjcgMS4yMDktLjE2NCAxLjY2MXoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=" !default;
+$fallback--image-credit__close--svg:             "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8cGF0aCBkPSJNMTIsMmM1LjUsMCwxMCw0LjUsMTAsMTBzLTQuNSwxMC0xMCwxMFMyLDE3LjUsMiwxMlM2LjUsMiwxMiwyeiBNMTIsMEM1LjQsMCwwLDUuNCwwLDEyczUuNCwxMiwxMiwxMiBzMTItNS40LDEyLTEyUzE4LjYsMCwxMiwweiBNMTcuNyw3LjdsLTEuNC0xLjRMMTIsMTAuNkw3LjcsNi4zTDYuMyw3LjdsNC4zLDQuM2wtNC4zLDQuM2wxLjQsMS40bDQuMy00LjNsNC4zLDQuM2wxLjQtMS40TDEzLjQsMTIgTDE3LjcsNy43eiIgZmlsbD0iI2ZmZmZmZiIvPg0KPC9zdmc+" !default;
+
+
+// Transitions:
+$fallback--image-credit--transition-duration:        0.8 !default;
+$fallback--image-credit--transition-timing-function: ease !default;
+
+/* -- Basic/fallback layout --------------------------------------------------------------------- */
+
+
+    /* -- .image-credit --------------------------------------------------------------------------*/
+
+    /*
+        New positioning context:
+    */
+    .credited-image,
+    .credited-image__image {
+        position: relative;
+    }
+
+
+    /*
+        Prevent scroll jump:
+    */
+    .credited-image__anchor {
+
+        position: fixed;
+    }
+
+
+    /*
+        Position: the controls:
+    */
+    .credited-image__control {
+        position: absolute;
+        #{$fallback--image-credit__control-h-position}: 0;
+        #{$fallback--image-credit__control-v-position}: 0;
+        display: block;
+        z-index: 2;
+    }
+
+    /*
+        Style the controls:
+    */
+    .credited-image__control[href] {
+        background: $fallback--image-credit__open--bg-color;
+        border: 0;
+        border-radius: $fallback--image-credit__control-radius;
+        margin: $fallback--image-credit__control-spacing;
+        padding: $fallback--image-credit__control-spacing;
+    }
+
+    .credited-image__control[href]:hover,
+    .credited-image__control[href]:active,
+    .credited-image__control[href]:focus {
+        background: $fallback--image-credit__open--bg-color--alt;
+        border: 0;
+    }
+
+
+    .credited-image__control--open::before {
+        display: block;
+        width: $fallback--image-credit__control-size;
+        height: $fallback--image-credit__control-size;
+        content: url($fallback--image-credit__open--svg);
+    }
+
+    .credited-image__control--close::before {
+        display: block;
+        width: $fallback--image-credit__control-size;
+        height: $fallback--image-credit__control-size;
+        content: url($fallback--image-credit__close--svg);
+    }
+
+
+    .credited-image__control--close[href]:hover,
+    .credited-image__control--close[href]:active,
+    .credited-image__control--close[href]:focus {
+        background: $fallback--image-credit__close--bg-color--alt;
+    }
+
+
+    /*
+        Set default control display:
+    */
+    .credited-image__control--close {
+        display: none;
+    }
+
+
+
+
+
+
+    /*
+        Swap the controls over:
+    */
+    .credited-image__anchor:target + .credited-image__image .credited-image__control--close {
+        display: block;
+    }
+
+    .credited-image__anchor:target + .credited-image__image .credited-image__control--open {
+        display: none;
+    }
+
+
+
+    /*
+        Style the credit-line:
+    */
+    .credited-image .credited-image__credit-line {
+        margin: 0;
+        background-color: $fallback--image-credit__credit-line--bg-color;
+        color: $fallback--image-credit__credit-line--text-color;
+        font-size: small;
+
+        height: 0;
+        overflow: hidden;
+
+    }
+
+    /*
+        Show the credit-line:
+    */
+    @media only screen and (max-width: $fallback--image-credit--breakpoint--enhanced) {
+        .credited-image__anchor:target ~ .credited-image__credit-line {
+            padding: $fallback--image-credit__credit-line--padding;
+            height: auto;
+        }
+    }
+
+    /* -- Enhanced layout --------------------------------------------------------------------------- */
+    @media only screen and (min-width: $fallback--image-credit--breakpoint--enhanced) {
+        /*
+            Position: the controls:
+        */
+        .credited-image__control {
+            top: 0;
+            bottom: auto;
+        }
+
+        /*
+            Position and style the credit-line:
+        */
+        .credited-image .credited-image__credit-line {
+            height: auto;
+            overflow: auto;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: $fallback--image-credit__credit-line--padding 5rem $fallback--image-credit__credit-line--padding $fallback--image-credit__credit-line--padding;
+
+            opacity: 0;
+            clip: rect(0px, 0px, 0px, 0px);
+            transition: opacity $fallback--image-credit--transition-duration $fallback--image-credit--transition-timing-function 0s, clip 0s $fallback--image-credit--transition-timing-function $fallback--image-credit--transition-duration;
+
+
+        }
+
+        .credited-image__anchor:target ~ .credited-image__credit-line {
+            opacity: 1;
+            clip: rect(0px, 999999px, 999999px, 0px);
+            transition: opacity $fallback--image-credit--transition-duration $fallback--image-credit--transition-timing-function 0s;
+        }
+    }
+
+
+/* -----------------------------------------------------------------------------------------------*/
