@@ -10,35 +10,35 @@
 
 // Colours:
 // Note that the UI colour isn't used by this pattern.
-$fallback--image-credit__open--bg-color:          rgba(0,0,0,0.2) !default;
-$fallback--image-credit__open--bg-color--alt:     rgba(0,0,0,0.4) !default;
+$fallback--image-credit__open--bg-color:             rgba(0,0,0,0.2) !default;
+$fallback--image-credit__open--bg-color--alt:        rgba(0,0,0,0.4) !default;
 
-$fallback--image-credit__close--bg-color:         $fallback--image-credit__open--bg-color;
-$fallback--image-credit__close--bg-color--alt:    rgba(255,255,255,0.1) !default;
+$fallback--image-credit__close--bg-color:            $fallback--image-credit__open--bg-color;
+$fallback--image-credit__close--bg-color--alt:       rgba(255,255,255,0.1) !default;
 
-$fallback--image-credit__credit-line--text-color: #fff;
-$fallback--image-credit__credit-line--bg-color:   rgba(0,0,0,0.8);
+$fallback--image-credit__credit-line--text-color:    #fff;
+$fallback--image-credit__credit-line--bg-color:      rgba(0,0,0,0.8);
 
 // Sizes:
-$fallback--image-credit__control-size:           1.5rem !default;//$fallback--image-credit--spacing * 2 !default;
-$fallback--image-credit__control-radius:         50% !default;
+$fallback--image-credit__control-size:               1.5rem !default;//$fallback--image-credit--spacing * 2 !default;
+$fallback--image-credit__control-radius:             50% !default;
 
-$fallback--image-credit__credit-line--padding:   0.75rem;
+$fallback--image-credit__credit-line--padding:       0.75rem;
 
 // Position:
-$fallback--image-credit__control-v-position:     top !default;
-$fallback--image-credit__control-h-position:     right !default;
+$fallback--image-credit__control-v-position:         top !default;
+$fallback--image-credit__control-h-position:         right !default;
 
-$fallback--image-credit__control-spacing:        0.1875rem !default;
+$fallback--image-credit__control-spacing:            0.1875rem !default;
 
 
 // Breakpoints:
-$fallback--image-credit--breakpoint--enhanced:   45em !default;
+$fallback--image-credit--breakpoint--enhanced:       45em !default;
 
 
 // SVG's
-$fallback--image-credit__open--svg:              "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJjNS41MTQgMCAxMCA0LjQ4NiAxMCAxMHMtNC40ODYgMTAtMTAgMTAtMTAtNC40ODYtMTAtMTAgNC40ODYtMTAgMTAtMTB6bTAtMmMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptLTIuMDMzIDE2LjAxYy41NjQtMS43ODkgMS42MzItMy45MzIgMS44MjEtNC40NzQuMjczLS43ODctLjIxMS0xLjEzNi0xLjc0LjIwOWwtLjM0LS42NGMxLjc0NC0xLjg5NyA1LjMzNS0yLjMyNiA0LjExMy42MTMtLjc2MyAxLjgzNS0xLjMwOSAzLjA3NC0xLjYyMSA0LjAzLS40NTUgMS4zOTMuNjk0LjgyOCAxLjgxOS0uMjExLjE1My4yNS4yMDMuMzMxLjM1Ni42MTktMi40OTggMi4zNzgtNS4yNzEgMi41ODgtNC40MDgtLjE0NnptNC43NDItOC4xNjljLS41MzIuNDUzLTEuMzIuNDQzLTEuNzYxLS4wMjItLjQ0MS0uNDY1LS4zNjctMS4yMDguMTY0LTEuNjYxLjUzMi0uNDUzIDEuMzItLjQ0MiAxLjc2MS4wMjIuNDM5LjQ2Ni4zNjcgMS4yMDktLjE2NCAxLjY2MXoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=" !default;
-$fallback--image-credit__close--svg:             "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8cGF0aCBkPSJNMTIsMmM1LjUsMCwxMCw0LjUsMTAsMTBzLTQuNSwxMC0xMCwxMFMyLDE3LjUsMiwxMlM2LjUsMiwxMiwyeiBNMTIsMEM1LjQsMCwwLDUuNCwwLDEyczUuNCwxMiwxMiwxMiBzMTItNS40LDEyLTEyUzE4LjYsMCwxMiwweiBNMTcuNyw3LjdsLTEuNC0xLjRMMTIsMTAuNkw3LjcsNi4zTDYuMyw3LjdsNC4zLDQuM2wtNC4zLDQuM2wxLjQsMS40bDQuMy00LjNsNC4zLDQuM2wxLjQtMS40TDEzLjQsMTIgTDE3LjcsNy43eiIgZmlsbD0iI2ZmZmZmZiIvPg0KPC9zdmc+" !default;
+$fallback--image-credit__open--svg:                  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJjNS41MTQgMCAxMCA0LjQ4NiAxMCAxMHMtNC40ODYgMTAtMTAgMTAtMTAtNC40ODYtMTAtMTAgNC40ODYtMTAgMTAtMTB6bTAtMmMtNi42MjcgMC0xMiA1LjM3My0xMiAxMnM1LjM3MyAxMiAxMiAxMiAxMi01LjM3MyAxMi0xMi01LjM3My0xMi0xMi0xMnptLTIuMDMzIDE2LjAxYy41NjQtMS43ODkgMS42MzItMy45MzIgMS44MjEtNC40NzQuMjczLS43ODctLjIxMS0xLjEzNi0xLjc0LjIwOWwtLjM0LS42NGMxLjc0NC0xLjg5NyA1LjMzNS0yLjMyNiA0LjExMy42MTMtLjc2MyAxLjgzNS0xLjMwOSAzLjA3NC0xLjYyMSA0LjAzLS40NTUgMS4zOTMuNjk0LjgyOCAxLjgxOS0uMjExLjE1My4yNS4yMDMuMzMxLjM1Ni42MTktMi40OTggMi4zNzgtNS4yNzEgMi41ODgtNC40MDgtLjE0NnptNC43NDItOC4xNjljLS41MzIuNDUzLTEuMzIuNDQzLTEuNzYxLS4wMjItLjQ0MS0uNDY1LS4zNjctMS4yMDguMTY0LTEuNjYxLjUzMi0uNDUzIDEuMzItLjQ0MiAxLjc2MS4wMjIuNDM5LjQ2Ni4zNjcgMS4yMDktLjE2NCAxLjY2MXoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=" !default;
+$fallback--image-credit__close--svg:                 "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+DQo8cGF0aCBkPSJNMTIsMmM1LjUsMCwxMCw0LjUsMTAsMTBzLTQuNSwxMC0xMCwxMFMyLDE3LjUsMiwxMlM2LjUsMiwxMiwyeiBNMTIsMEM1LjQsMCwwLDUuNCwwLDEyczUuNCwxMiwxMiwxMiBzMTItNS40LDEyLTEyUzE4LjYsMCwxMiwweiBNMTcuNyw3LjdsLTEuNC0xLjRMMTIsMTAuNkw3LjcsNi4zTDYuMyw3LjdsNC4zLDQuM2wtNC4zLDQuM2wxLjQsMS40bDQuMy00LjNsNC4zLDQuM2wxLjQtMS40TDEzLjQsMTIgTDE3LjcsNy43eiIgZmlsbD0iI2ZmZmZmZiIvPg0KPC9zdmc+" !default;
 
 
 // Transitions:
